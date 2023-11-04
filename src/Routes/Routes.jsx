@@ -4,6 +4,10 @@ import {
 import Root from "../Layout/Root";
 import Home from "../Pages/Home/Home";
 import ErrorElement from "../Layout/ErrorElement";
+import AddJob from "../Pages/AddJob/AddJob";
+import MyPostedJobs from "../Pages/MyPostedJobs/MyPostedJobs";
+import MyBids from "../Pages/MyBids/MyBids";
+import BidRequests from "../Pages/BidRequests/BidRequests";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +18,22 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
+            },
+            {
+                path: "/addjob",
+                element: <AddJob></AddJob>,
+            },
+            {
+                path: "/postedjobs",
+                element: <MyPostedJobs></MyPostedJobs>,
+            },
+            {
+                path: "/mybids",
+                element: <MyBids></MyBids>,
+            },
+            {
+                path: "/bidrequests",
+                element: <BidRequests></BidRequests>,
             }
         ]
     },
