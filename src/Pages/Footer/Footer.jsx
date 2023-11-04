@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import logo from "../../assets/logo.png";
 import { FaFacebookF } from 'react-icons/fa';
 import { CiTwitter } from 'react-icons/ci';
@@ -6,8 +7,8 @@ import { FiLinkedin } from 'react-icons/fi';
 const Footer = () => {
     return (
         <div className='bg-[#272530]'>
-            <div className='mt-5 lg:px-5 container mx-auto'>
-                <div className='flex flex-col gap-20 lg:flex-row pt-10 '>
+            <div className='mt-5  container mx-auto'>
+                <div className='flex flex-col gap-10 lg:flex-row pt-10 '>
                     <div className='text-center md:text-left md:ml-14 lg:ml-0'>
                         <div className="flex items-center justify-center md:justify-start gap-2 mb-3 ">
                             <img className="w-10 h-10" src={logo} alt="" />
