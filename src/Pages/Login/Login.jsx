@@ -3,12 +3,16 @@ import { FiGithub } from 'react-icons/fi';
 import { FiTwitter } from 'react-icons/fi';
 import { FcGoogle } from 'react-icons/fc';
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { AiOutlineEye } from 'react-icons/ai';
+import { AiOutlineEyeInvisible } from 'react-icons/ai';
 
 const Login = () => {
+    const [showPassword, setShowPassword] = useState(false)
     return (
         <div>
             <div className="container mx-auto flex flex-col gap-10 lg:gap-0 items-center lg:flex-row justify-evenly mb-32">
-                <div className="md:w-[500px] mt-40 ">
+                <div className="md:w-[600px] mt-40 ">
                     <img src={login} alt="" />
                 </div>
                 <div className="border md:w-[500px] lg:w-[600px] h-[750px] mt-16 pt-5 md:p-5 lg:p-[75px] bg-[#fff] rounded-lg">
@@ -20,7 +24,14 @@ const Login = () => {
                         </div>
                         <div className="mb-7">
                             <h2 className="text-lg font-semibold text-[#444] mb-5">Password</h2>
-                            <input className="pt-4 pb-4 pl-6 w-[415px] md:w-[461px] border-[#E8E8E8] border-[1px] text-[#A2A2A2] rounded-lg" type="email" name="password" id="" placeholder="Enter your password" />
+                            <div className="relative">
+                                <input className="pt-4 pb-4 pl-6 w-[415px] md:w-[461px] border-[#E8E8E8] border-[1px] text-[#A2A2A2] rounded-lg" type={showPassword ? "text" : "password"} name="password" id="" placeholder="Enter your password" />
+                                <span className="absolute right-4 md:right-1 top-5 rtl:left-0 rtl:right-auto " onClick={() => { setShowPassword(!showPassword) }} >
+                                    {
+                                        showPassword ? <AiOutlineEyeInvisible className='text-xl'></AiOutlineEyeInvisible> : <AiOutlineEye className='text-xl'></AiOutlineEye>
+                                    }
+                                </span>
+                            </div>
                         </div>
                         <div className="mb-7">
                             <input type="submit" className="py-4 bg-[#FF3811] text-white w-[415px] md:w-[461px] rounded-lg text-xl font-semibold cursor-pointer" value="Sign In" />
