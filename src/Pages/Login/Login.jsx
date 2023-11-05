@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import login from "../../assets/login.svg";
 import { FiGithub } from 'react-icons/fi';
 import { FiTwitter } from 'react-icons/fi';
