@@ -70,7 +70,7 @@ const Register = () => {
                     <Player
                         autoplay
                         loop
-                        src="https://lottie.host/707fc906-7cd0-408a-bd14-2e5a27a9bd29/iVhDngXrPo.json"
+                        src="https://lottie.host/932949b7-be0a-4424-81c1-deb1f9bfd7f7/TVfyxTvO6A.json"
 
                     >
                     </Player>
