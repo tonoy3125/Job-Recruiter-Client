@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { AuthContext } from './../../Providers/Authprovider';
 
 
 const AddJob = () => {
+    const { user } = useContext(AuthContext)
     const [deadline, setDeadline] = useState('');
     // const [buttonDisabled, setButtonDisabled] = useState(false);
 
@@ -23,12 +25,12 @@ const AddJob = () => {
         const form = event.target
         const name = form.name.value
         const category_name = form.category_name.value
-        const email = form.email.value
+        // const email = form.email.value
         const deadline = form.deadline.value
         const minimum_price = form.minimum_price.value
         const maximum_price = form.maximum_price.value
         const description = form.description.value
-
+        const email = user?.email
         const newJob = { name, category_name, email, deadline, minimum_price, maximum_price, description }
         console.log(newJob)
 
@@ -84,7 +86,7 @@ const AddJob = () => {
                     <div className="flex flex-col md:flex-row items-center gap-6 mb-6 px-1 lg:px-24 ">
                         <div className="w-full md:w-1/2">
                             <h2 className=" text-base md:text-xl font-semibold text-[#1B1A1ACC] mb-4">Email <span className="text-red-700">*</span></h2>
-                            <input className="pt-5 pb-5 pl-2 md:p-5 w-full bg-[#fff]  text-base font-normal text-[#1B1A1A99] rounded" type="email" name="email" placeholder="Enter Email Address Here" id="" />
+                            <input className="pt-5 pb-5 pl-2 md:p-5 w-full bg-[#fff]  text-base font-normal text-[#1B1A1A99] rounded" type="email" defaultValue={user?.email} name="email" placeholder="Enter Email Address Here" id="" />
                         </div>
                         <div className="w-full md:w-1/2">
                             <h2 className=" text-base md:text-xl font-semibold text-[#1B1A1ACC] mb-4">Deadline <span className="text-red-700">*</span></h2>
