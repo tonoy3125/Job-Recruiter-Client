@@ -18,9 +18,22 @@ const AddJob = () => {
     };
     return (
         <div>
-            <div className="container mx-auto bg-[#F3F3F3] rounded-lg mt-10">
+            <div className="flex flex-col lg:flex-row items-center justify-evenly flex-shrink-0 bg-[#a7bcb9] mt-10">
+                <div className="text-center lg:text-start pt-5 lg:pt-0">
+                    <h2 className="text-xl text-[#FFFFFF] font-medium mb-5">EMPLOYERS</h2>
+                    <h1 className="text-[#FFFFFF] text-4xl mb-5">Looking to post a job?</h1>
+                    <p className="text-[#FFFFFF] text-xl mb-5">We have end-to-end solutions that can keep up <br /> with you and your standards.</p>
+                    <button className="text-[#FFFFFF] btn btn-outline px-5">Post Your Job</button>
+                </div>
+                <div>
+                    <img className="h-[400px]" src="https://i.ibb.co/S6JXmdD/addjobbanner-removebg-preview.png" alt="" />
+                </div>
+            </div>
+            <div className="container mx-auto bg-[#F3F3F3] rounded-lg mt-10 pt-24">
+                <h1 className="text-4xl text-center font-bold text-[#374151] mb-6 px-1 lg:px-24">Add A Job</h1>
+                <p className="text-center text-base font-medium text-[#1B1A1AB3] px-1 lg:px-24 mb-14">Job Recruiter is a dynamic job marketplace dedicated to connecting talented professionals with exciting opportunities. We strive to make the job posting process seamless and effective for both employers and job seekers.</p>
                 <form>
-                    <div className="flex flex-col md:flex-row items-center gap-6 mb-6 px-1 lg:px-24 pt-24">
+                    <div className="flex flex-col md:flex-row items-center gap-6 mb-6 px-1 lg:px-24 ">
                         <div className="w-full md:w-1/2">
                             <h2 className=" text-base md:text-xl font-semibold text-[#1B1A1ACC] mb-4">Job title</h2>
                             <input className="pt-5 pb-5 pl-2 md:p-5 w-full shadow-md  text-base font-normal text-[#1B1A1A99] rounded" type="text" name="name" placeholder="Enter Job title Here" id="" />
