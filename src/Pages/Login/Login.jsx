@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-import login from "../../assets/login.svg";
 import { FiGithub } from 'react-icons/fi';
 import { FiTwitter } from 'react-icons/fi';
 import { FcGoogle } from 'react-icons/fc';
@@ -11,6 +10,7 @@ import { AiOutlineEyeInvisible } from 'react-icons/ai';
 import { AuthContext } from './../../Providers/Authprovider';
 import toast, { Toaster } from "react-hot-toast";
 import swal from "sweetalert";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -86,7 +86,13 @@ const Login = () => {
         <div>
             <div className="container mx-auto flex flex-col gap-10 lg:gap-0 items-center lg:flex-row justify-evenly mb-32">
                 <div className="md:w-[600px] mt-40 ">
-                    <img src={login} alt="" />
+                    <Player
+                        autoplay
+                        loop
+                        src="https://lottie.host/32f80b08-e70e-41f8-b5d9-1282047c7335/A5prRyUKZS.json"
+
+                    >
+                    </Player>
                 </div>
                 <div className="border md:w-[500px] lg:w-[600px] h-[750px] mt-16 pt-5 md:p-5 lg:p-[75px] bg-[#fff] rounded-lg">
                     <h1 className="text-[40px] font-semibold text-[#444] text-center  mb-12">Sign In</h1>

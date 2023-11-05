@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useContext, useState } from "react";
-import register from "../../assets/login.svg";
 import { AiOutlineEye } from 'react-icons/ai';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from './../../Providers/Authprovider';
 import toast, { Toaster } from "react-hot-toast";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -66,8 +66,14 @@ const Register = () => {
     return (
         <div>
             <div className="container mx-auto flex flex-col gap-10 lg:gap-0 items-center lg:flex-row justify-evenly mb-32">
-                <div className="md:w-[600px] mt-40 ">
-                    <img src={register} alt="" />
+                <div className="md:w-[700px] mt-40 ">
+                    <Player
+                        autoplay
+                        loop
+                        src="https://lottie.host/707fc906-7cd0-408a-bd14-2e5a27a9bd29/iVhDngXrPo.json"
+
+                    >
+                    </Player>
                 </div>
                 <div className="border md:w-[500px] lg:w-[600px] h-[880px] mt-16 pt-5 md:p-5 lg:p-[75px] bg-[#fff] rounded-lg ">
                     <h1 className="text-[40px] font-semibold text-[#444] text-center  mb-12">Sign Up</h1>
