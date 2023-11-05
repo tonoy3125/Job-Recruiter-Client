@@ -24,6 +24,7 @@ const Register = () => {
 
 
 
+        // Password Regex  
 
         if (!/^(?=.*[A-Z]).+$/
             .test(password)) {
@@ -40,6 +41,7 @@ const Register = () => {
         }
 
 
+        // Create User 
 
         createUser(email, password)
             .then(result => {

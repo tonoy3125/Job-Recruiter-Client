@@ -27,13 +27,13 @@ const Login = () => {
         console.log(email, password)
 
 
-
+        // Password regex
         if (!/^.{6,}$/.test(password)) {
             toast.error("Password must be at least 6 characters");
             return
         }
 
-
+        // Sign in 
         signIn(email, password)
             .then(result => {
                 console.log('Navigating to:', location?.state ? location.state : "/");
@@ -52,6 +52,7 @@ const Login = () => {
             })
     }
 
+    // Google sign in
     const handleGoogleSignIn = () => {
         signInWithGoogle()
             .then(result => {
@@ -64,6 +65,8 @@ const Login = () => {
                 toast.error(errormsg);
             })
     }
+
+    // Github sign in
     const handleGithubSignIn = () => {
         signInWithGithub()
             .then(result => {
