@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const AddJob = () => {
@@ -28,8 +29,25 @@ const AddJob = () => {
         const maximum_price = form.maximum_price.value
         const description = form.description.value
 
-        const newProduct = { name, category_name, email, deadline, minimum_price, maximum_price, description }
-        console.log(newProduct)
+        const newJob = { name, category_name, email, deadline, minimum_price, maximum_price, description }
+        console.log(newJob)
+
+
+        fetch('http://localhost:5000/job', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newJob)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    toast.success('Product added succesfully')
+                }
+                form.reset()
+            })
     }
 
     return (
@@ -92,6 +110,7 @@ const AddJob = () => {
                     </div>
                 </form>
             </div>
+            <Toaster></Toaster>
         </div>
     );
 };

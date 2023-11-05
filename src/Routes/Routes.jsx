@@ -11,6 +11,7 @@ import BidRequests from "../Pages/BidRequests/BidRequests";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 
+
 const router = createBrowserRouter([
     {
         path: "/",

@@ -1,9 +1,10 @@
+import Categories from "../Categories/Categories";
 
 
 const Home = () => {
     return (
         <div>
-            <h1>MY name Is tonoy</h1>
+            <Categories></Categories>
         </div>
     );
 };
