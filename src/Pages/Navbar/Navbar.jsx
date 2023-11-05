@@ -1,8 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { AiOutlineMenu } from 'react-icons/ai';
+import { useContext } from "react";
+import { AuthContext } from './../../Providers/Authprovider';
 
 const Navbar = () => {
+
+    const { user, logOut, loading } = useContext(AuthContext)
+    console.log(loading)
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user)
+            })
+            .then(error => {
+                console.log(error)
+            })
+    }
+
     return (
         <div className="bg-[#007456]">
             <div className="navbar  container mx-auto">
@@ -58,7 +75,34 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end flex items-center gap-5">
+                    {
+                        user ? <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip" >
+                                <div className="w-10 h-10 rounded-full">
+                                    <img src={user.photoURL} />
+                                </div>
+                            </label>
 
+                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-lg text-black font-bold bg-base-100 rounded-box w-52">
+                                <li className="mb-1">
+                                    <button className="px-5 py-3 rounded-lg bg-[#DE3163] text-white">{user.displayName}</button>
+
+                                </li>
+                                <li>
+                                    <button onClick={handleLogOut} className="px-5 py-3 rounded-lg bg-[#DE3163] text-white">SignOut</button>
+
+                                </li>
+                            </ul>
+                        </div>
+                            :
+                            <Link to="/login">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src="https://i.ibb.co/WsLGC0q/user.png" />
+                                    </div>
+                                </label>
+                            </Link>
+                    }
                 </div>
             </div>
         </div>

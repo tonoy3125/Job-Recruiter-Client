@@ -20,8 +20,7 @@ const Register = () => {
         const photo = e.target.photo.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        const accepted = e.target.terms.checked;
-        console.log(name, email, password, photo, accepted)
+        console.log(name, email, password, photo)
 
 
 
@@ -77,7 +76,7 @@ const Register = () => {
                         </div>
                         <div className="mb-7">
                             <h2 className="text-lg font-semibold text-[#444] mb-5">Photo URL</h2>
-                            <input className="pt-4 pb-4 pl-6 w-[415px] md:w-[461px] border-[#E8E8E8] border-[1px] text-[#A2A2A2] rounded-lg" type="text" name="password" id="" placeholder="Enter your Photo URL" />
+                            <input className="pt-4 pb-4 pl-6 w-[415px] md:w-[461px] border-[#E8E8E8] border-[1px] text-[#A2A2A2] rounded-lg" type="text" name="photo" id="" placeholder="Enter your Photo URL" />
                         </div>
                         <div className="mb-7">
                             <h2 className="text-lg font-semibold text-[#444] mb-5">Email address</h2>
