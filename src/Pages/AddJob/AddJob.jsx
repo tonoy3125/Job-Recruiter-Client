@@ -1,11 +1,13 @@
 import { useContext, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from './../../Providers/Authprovider';
+import { useNavigate } from "react-router-dom";
 
 
 const AddJob = () => {
     const { user } = useContext(AuthContext)
     const [deadline, setDeadline] = useState('');
+    const navigate = useNavigate()
     // const [buttonDisabled, setButtonDisabled] = useState(false);
 
     const handleDeadlineChange = (e) => {
@@ -46,6 +48,7 @@ const AddJob = () => {
             .then(data => {
                 console.log(data)
                 if (data.insertedId) {
+                    navigate('/postedjobs')
                     toast.success('Product added succesfully')
                 }
                 form.reset()
