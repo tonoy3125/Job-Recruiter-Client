@@ -1,22 +1,12 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 
 
 const JobDetail = ({ job }) => {
     const { _id, name, category_name, deadline, minimum_price, maximum_price, description } = job
-    const [deadlines, setDeadlines] = useState('');
-    // const [buttonDisabled, setButtonDisabled] = useState(false);
 
-    const handleDeadlineChange = (e) => {
-        setDeadlines(e.target.value);
-        const deadlineDate = new Date(e.target.value);
-        const currentDate = new Date();
-
-        // if (currentDate > deadlineDate) {
-        //     setButtonDisabled(true);
-        // } else {
-        //     setButtonDisabled(false);
-        // }
-    };
+    
 
     return (
         <div className="mt-10 container mx-auto">
@@ -54,7 +44,7 @@ const JobDetail = ({ job }) => {
                         <div className="flex flex-col md:flex-row items-center gap-6 mb-6gap-6 mb-6 px-1  ">
                             <div className="w-full md:w-1/2">
                                 <h2 className=" text-base md:text-xl font-semibold text-[#1B1A1ACC] mb-4">Deadline <span className="text-red-700">*</span></h2>
-                                <input className="pt-5 pb-5 pl-2 md:p-5 w-full bg-[#fff] border border-black text-base font-normal text-[#1B1A1A99] rounded" type="datetime-local" name="deadline" value={deadline} onChange={handleDeadlineChange} placeholder="Deadline" id="" />
+                                <input className="pt-5 pb-5 pl-2 md:p-5 w-full bg-[#fff] border border-black text-base font-normal text-[#1B1A1A99] rounded" type="date" name="deadline" value={deadline}  placeholder="Deadline" id="" />
                             </div>
                             <div className="w-full md:w-1/2">
                                 <h2 className=" text-base md:text-xl font-semibold text-[#1B1A1ACC] mb-4">Price <span className="text-red-700">*</span></h2>
