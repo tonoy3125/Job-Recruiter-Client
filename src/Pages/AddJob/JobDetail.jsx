@@ -9,6 +9,7 @@ const JobDetail = ({ job }) => {
     const { user } = useContext(AuthContext)
     const { _id, name, category_name, deadline, email, minimum_price, maximum_price, description } = job
 
+
     const handleBidJob = (event) => {
         event.preventDefault()
         const form = event.target
@@ -16,7 +17,8 @@ const JobDetail = ({ job }) => {
         const buyeremail = form.buyeremail.value
         const deadline = form.deadline.value
         const price = form.price.value
-        const newBidJob = { useremail, buyeremail, deadline, price }
+        const newBidJob = { useremail, buyeremail, deadline, price, name }
+        console.log(name)
         console.log(newBidJob)
 
         fetch("http://localhost:5000/bid", {
