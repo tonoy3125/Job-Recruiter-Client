@@ -21,7 +21,7 @@ const MyPostedJobs = () => {
         <div>
             <div className="grid grid-cols-1 md:grid-cols-2 mt-10 px-1 lg:px-0 container mx-auto gap-5">
                 {
-                    jobs?.map(job => <PostedJobCard key={job._id} job={job}></PostedJobCard>)
+                    jobs?.map(job => <PostedJobCard key={job._id} job={job} jobs={jobs} setJobs={setJobs}></PostedJobCard>)
                 }
             </div>
         </div>

@@ -1,11 +1,52 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
+import Swal from "sweetalert2";
 import { BiEditAlt } from 'react-icons/bi';
 import { AiOutlineDelete } from 'react-icons/ai';
 
 
-const PostedJobCard = ({ job }) => {
+
+const PostedJobCard = ({ job, jobs, setJobs }) => {
     const { _id, name, category_name, deadline, minimum_price, maximum_price, description } = job
+
+
+    // Handle Delete function
+    const handleDelete = _id => {
+        console.log(_id)
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/jobs/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data)
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                'Your Product has been deleted.',
+                                'success'
+                            )
+                            const remaining = jobs.filter(cot => cot._id !== _id)
+                            setJobs(remaining)
+                        }
+                    })
+            }
+        })
+    }
+
+
+    // const handleUpdate = () => {
+
+    // }
+
+
     return (
         <div>
             <div className="max-w-2xl px-8 py-4 border bg-[#F5F4F1] rounded-lg shadow-md dark:bg-gray-800">
@@ -16,7 +57,7 @@ const PostedJobCard = ({ job }) => {
 
                 <div className='flex flex-col lg:flex-row items-center'>
                     <div className="mt-2">
-                        <h1 className="text-xl lg:text-start text-center font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline"  role="link">{name}</h1>
+                        <h1 className="text-xl lg:text-start text-center font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline" role="link">{name}</h1>
                         <h2 className='lg:text-start text-center'>{category_name}</h2>
                         <p className="mt-2 text-gray-600 dark:text-gray-300 lg:w-1/2 lg:text-start text-center">{description}</p>
                         <div className=" mt-4 lg:text-start text-center mb-5 lg:mb-0">
@@ -27,7 +68,7 @@ const PostedJobCard = ({ job }) => {
                         <button className='btn btn-outline bg-[#3C393B] text-white mb-3 mr-3 lg:mr-0'>
                             <BiEditAlt className='text-2xl'></BiEditAlt>
                         </button>
-                        <button className='btn btn-outline hover:bg-[#E71D36] bg-[#EA4744] text-white'>
+                        <button onClick={() => handleDelete(_id)} className='btn btn-outline hover:bg-[#E71D36] bg-[#EA4744] text-white'>
                             <AiOutlineDelete className='text-2xl'></AiOutlineDelete>
                         </button>
                     </div>
