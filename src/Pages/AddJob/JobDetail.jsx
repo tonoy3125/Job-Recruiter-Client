@@ -50,7 +50,6 @@ const JobDetail = ({ job }) => {
                                 <h2 className=" text-base md:text-xl font-semibold text-[#1B1A1ACC] mb-4">Buyer Email <span className="text-red-700">*</span></h2>
                                 <input className="pt-5 pb-5 pl-2 md:p-5 w-full bg-[#fff] border border-black text-base font-normal text-[#1B1A1A99] rounded" type="email" name="email" placeholder="Enter Email Address Here" id="" />
                             </div>
-
                         </div>
                         <div className="flex flex-col md:flex-row items-center gap-6 mb-6gap-6 mb-6 px-1  ">
                             <div className="w-full md:w-1/2">
