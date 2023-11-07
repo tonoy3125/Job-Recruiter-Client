@@ -1,7 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from './../../Providers/Authprovider';
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 
 const AddJob = () => {
@@ -47,7 +48,8 @@ const AddJob = () => {
 
     return (
         <div>
-            <div className="flex flex-col lg:flex-row items-center justify-evenly flex-shrink-0 bg-[#a7bcb9] mt-10">
+            <div className="flex flex-col lg:flex-row items-center justify-evenly flex-shrink-0  mt-10">
+            <Helmet><title>Job Recruiter | Add Job</title></Helmet>
                 <div className="text-center lg:text-start pt-5 lg:pt-0">
                     <h2 className="text-xl text-[#FFFFFF] font-medium mb-5">EMPLOYERS</h2>
                     <h1 className="text-[#FFFFFF] text-4xl mb-5">Looking to post a job?</h1>
@@ -58,7 +60,7 @@ const AddJob = () => {
                     <img className="h-[400px]" src="https://i.ibb.co/S6JXmdD/addjobbanner-removebg-preview.png" alt="" />
                 </div>
             </div>
-            <div className="container mx-auto bg-[#F3F3F3] rounded-lg mt-10 pt-24">
+            <div className="container mx-auto border-l-2 shadow-2xl shadow-[#95a5a6]] rounded-lg mt-10 pt-24">
                 <h1 className="text-4xl text-center font-bold text-[#374151] mb-6 px-1 lg:px-24">Add A Job</h1>
                 <p className="text-center text-base font-medium text-[#1B1A1AB3] px-1 lg:px-24 mb-14">Job Recruiter is a dynamic job marketplace dedicated to connecting talented professionals with exciting opportunities. We strive to make the job posting process seamless and effective for both employers and job seekers.</p>
                 <form onSubmit={handleAddJob}>

@@ -7,6 +7,7 @@ import GraphicsCategory from "./graphicsCategory";
 
 
 
+
 const Categories = () => {
     // const [jobs, setJobs] = useState([]);
 

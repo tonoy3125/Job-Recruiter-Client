@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from './../../Providers/Authprovider';
 import toast, { Toaster } from "react-hot-toast";
 import { Player } from "@lottiefiles/react-lottie-player";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -65,6 +66,7 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet><title>Job Recruiter | Register</title></Helmet>
             <div className="container mx-auto flex flex-col gap-10 lg:gap-0 items-center lg:flex-row justify-evenly mb-32">
                 <div className="md:w-[700px] mt-40 ">
                     <Player

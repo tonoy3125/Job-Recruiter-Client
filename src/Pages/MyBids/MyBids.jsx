@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/Authprovider";
 import BidDetails from "./BidDetails";
+import { Helmet } from "react-helmet";
 
 
 const MyBids = () => {
@@ -18,6 +19,7 @@ const MyBids = () => {
     }, [email])
     return (
         <div>
+            <Helmet><title>Job Recruiter | My Bid</title></Helmet>
             <div className="overflow-x-auto container mx-auto">
                 <table className="table">
                     {/* head */}

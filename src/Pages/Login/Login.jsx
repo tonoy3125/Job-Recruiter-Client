@@ -11,6 +11,7 @@ import { AuthContext } from './../../Providers/Authprovider';
 import toast, { Toaster } from "react-hot-toast";
 import swal from "sweetalert";
 import { Player } from "@lottiefiles/react-lottie-player";
+import { Helmet } from 'react-helmet';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
@@ -84,6 +85,7 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet><title>Job Recruiter | Login</title></Helmet>
             <div className="container mx-auto flex flex-col gap-10 lg:gap-0 items-center lg:flex-row justify-evenly mb-32">
                 <div className="md:w-[600px] mt-40 ">
                     <Player

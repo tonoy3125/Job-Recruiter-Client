@@ -1,9 +1,11 @@
 import { Player } from '@lottiefiles/react-lottie-player';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
 const ErrorElement = () => {
     return (
-        <div className='text-center mt-10'>
+        <div className='text-center mt-10 '>
+            <Helmet><title>Job Recruiter || Error</title></Helmet>
             <Player
                 autoplay
                 loop

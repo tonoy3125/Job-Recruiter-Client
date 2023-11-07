@@ -3,6 +3,7 @@
 import { useContext, useState } from "react";
 import { AuthContext } from './../../Providers/Authprovider';
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 
 const JobDetail = ({ job }) => {
@@ -43,6 +44,7 @@ const JobDetail = ({ job }) => {
 
     return (
         <div className="mt-10 container mx-auto">
+            <Helmet><title>Job Recruiter | Job details</title></Helmet>
             <div className=" px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
                 <div className="flex items-center justify-between">
                     <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{deadline}</span>

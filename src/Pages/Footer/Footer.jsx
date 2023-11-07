@@ -6,8 +6,8 @@ import { AiOutlineInstagram } from 'react-icons/ai';
 import { FiLinkedin } from 'react-icons/fi';
 const Footer = () => {
     return (
-        <div className='bg-[#272530]'>
-            <div className='mt-5  container mx-auto'>
+        <div className='bg-gradient-to-r from-[#95a5a6] to-[#2980b9]'>
+            <div className='mt-10 container mx-auto'>
                 <div className='flex flex-col gap-5 lg:flex-row pt-10 '>
                     <div className='text-center md:text-left md:ml-14 lg:ml-0'>
                         <div className="flex items-center justify-center md:justify-start gap-2 mb-3 ">

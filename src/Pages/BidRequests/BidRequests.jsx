@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from './../../Providers/Authprovider';
 import BidRequestsForm from "./BidRequestsForm";
+import { Helmet } from "react-helmet";
 
 const BidRequests = () => {
     const { user } = useContext(AuthContext)
@@ -19,6 +20,7 @@ const BidRequests = () => {
 
     return (
         <div>
+            <Helmet><title>Job Recruiter | Bid Request</title></Helmet>
             <div className="overflow-x-auto container mx-auto">
                 <table className="table">
                     {/* head */}
