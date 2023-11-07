@@ -86,7 +86,7 @@ const JobDetail = ({ job }) => {
                         </div>
 
                         <div className="px-24 pb-10">
-                            <input type="submit" value="Bid on the project" className="btn btn-block bg-[#196F3D] text-lg text-[#fff] hover:bg-[#154360] " />
+                            <input type="submit" value="Bid on the project" disabled={user?.email === email} className="btn btn-block bg-[#196F3D] text-lg text-[#fff] hover:bg-[#154360] " />
                         </div>
                     </form>
                 </div>

@@ -32,7 +32,7 @@ const MyBids = () => {
                     </thead>
                     <tbody>
                         {
-                            bids.map(bid => <BidDetails key={bid._id} bid={bid}></BidDetails>)
+                            bids.map(bid => <BidDetails key={bid._id} bid={bid} bids={bids} setBids={setBids}></BidDetails>)
                         }
                     </tbody>
                 </table>

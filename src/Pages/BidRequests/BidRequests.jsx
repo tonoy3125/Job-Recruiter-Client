@@ -33,7 +33,7 @@ const BidRequests = () => {
                     </thead>
                     <tbody>
                         {
-                            bidrequest.map(singlebid => <BidRequestsForm key={singlebid._id} singlebid={singlebid}></BidRequestsForm>)
+                            bidrequest.map(singlebid => <BidRequestsForm key={singlebid._id} singlebid={singlebid} bidrequest={bidrequest} setBidrequest={setBidrequest}></BidRequestsForm>)
                         }
                     </tbody>
                 </table>
