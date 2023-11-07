@@ -17,7 +17,7 @@ const JobDetail = ({ job }) => {
         const buyeremail = form.buyeremail.value
         const deadline = form.deadline.value
         const price = form.price.value
-        const newBidJob = { useremail, buyeremail, deadline, price, name }
+        const newBidJob = { useremail, buyeremail, deadline, price, name, status: 'pending' }
         console.log(name)
         console.log(newBidJob)
 
@@ -31,7 +31,7 @@ const JobDetail = ({ job }) => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                toast.success("Your product has been added to the cart.");
+                toast.success("Your Bid job has been added to my bid form.");
             });
 
 
