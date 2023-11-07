@@ -62,6 +62,12 @@ const Authprovider = ({ children }) => {
                         console.log('token response', res.data)
                     })
             }
+            else {
+                axios.post('http://localhost:5000/logout', loggedUser, { withCredentials: true })
+                    .then(res => {
+                        console.log(res.data)
+                    })
+            }
         })
 
         return () => {
