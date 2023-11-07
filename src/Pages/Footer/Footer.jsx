@@ -15,8 +15,8 @@ const Footer = () => {
                             <h1 className=" text-center md:text-left text-base lg:text-2xl font-extrabold text-white">Job Recruiter</h1>
                         </div>
                         <p className='text-white text-sm lg:text-base font-medium mb-5'>Discover Your Next Chapter</p>
-                        <p className='text-[#a3a3a6] text-sm font-medium mb-5 px-2 md:px-0'>Don't miss the Opportunity Knocks Job Market <br /> Showcase - your gateway to a fulfilling career!</p>
-                        <p className="text-[#a3a3a6] text-sm font-medium mb-5 px-2 md:px-0">9/F, Motijheel Commercial Area, Dhaka-1000</p>
+                        <p className='text-white text-sm font-medium mb-5 px-2 md:px-0'>Don't miss the Opportunity Knocks Job Market <br /> Showcase - your gateway to a fulfilling career!</p>
+                        <p className="text-white text-sm font-medium mb-5 px-2 md:px-0">9/F, Motijheel Commercial Area, Dhaka-1000</p>
                         <div className="flex items-center justify-center md:justify-start text-white gap-5 mb-5  md:px-0">
                             <FaFacebookF className="text-xl"></FaFacebookF>
                             <CiTwitter className="text-xl"></CiTwitter>

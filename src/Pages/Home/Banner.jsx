@@ -3,10 +3,11 @@ import { BiLogoFacebookCircle } from 'react-icons/bi';
 import { AiFillInstagram } from 'react-icons/ai';
 import { AiFillTwitterCircle } from 'react-icons/ai';
 import { AiFillLinkedin } from 'react-icons/ai';
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const Banner = () => {
     return (
-        <div className="bg-gradient-to-r from-[#95a5a6] to-[#2980b9]">
+        <div className="bg-gradient-to-r from-[#95a5a6] to-[#2980b9] mb-10">
             <div className="flex items-center justify-center flex-col-reverse lg:flex-row text-center p-5">
                 <div className=" w-full lg:w-1/2">
                     <h1 className="mb-5 text-6xl text-fuchsia-900 font-bold">Find Your Dream <br /> Job Here</h1>
@@ -28,7 +29,13 @@ const Banner = () => {
                     <p className='text-sm font-medium mt-4 text-white'>www.Jobrecruiter.com</p>
                 </div>
                 <div className="text-center w-full lg:w-1/2">
-                    <img className="" src="https://i.ibb.co/2Zt7zBz/18959-removebg.png" alt="" />
+                <Player
+                        autoplay
+                        loop
+                        src="https://lottie.host/82556d56-69ab-4a8b-828e-b44ccfa909ef/pY59voezx7.json"
+
+                    >
+                    </Player>
                 </div>
             </div>
         </div>
