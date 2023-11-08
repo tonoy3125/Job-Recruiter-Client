@@ -45,7 +45,7 @@ const JobDetail = ({ job }) => {
     return (
         <div className="mt-10 container mx-auto">
             <Helmet><title>Job Recruiter | Job details</title></Helmet>
-            <div className=" px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+            <div className=" px-8 py-4 border shadow-2xl shadow-[#95a5a6] rounded-lg dark:bg-gray-800">
                 <div className="flex items-center justify-between">
                     <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{deadline}</span>
                     {/* <a className="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-300 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500" tabindex="0" role="button">Design</a> */}
