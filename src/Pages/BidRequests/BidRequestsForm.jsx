@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import axios from "axios";
-import "react-step-progress-bar/styles.css";
+
 import "react-step-progress-bar/styles.css";
 import { ProgressBar } from "react-step-progress-bar";
 
@@ -53,17 +53,22 @@ const BidRequestsForm = ({ singlebid, bidrequest, setBidrequest }) => {
             <td className="text-white font-medium">{status}</td>
             <td className="flex items-center gap-3 text-white font-medium">
                 {status === 'progress' || status === 'rejected' ? (
-                    <ProgressBar
-                        percent={status === 'progress' ? 50 : 100}
-                        filledBackground={
-                            status === 'progress' ? 'linear-gradient(to right, #fefb72, #f0bb31)' : 'linear-gradient(to right, #ff0000, #ff0000)'
-                        }
-                    />
+                    <div className=" w-full">
+                        <ProgressBar
+                            percent={status === 'progress' ? 50 : 100}
+                            filledBackground={
+                                status === 'progress' ? 'linear-gradient(to right, #fefb72, #f0bb31)' : 'linear-gradient(to right, #ff0000, #ff0000)'
+                            }
+                        />
+                    </div>
+
                 ) : status === 'completed' ? (
-                    <ProgressBar
-                        percent={100}
-                        filledBackground="linear-gradient(to right, #00ff00, #00ff00)"
-                    />
+                    <div className="w-full">
+                        <ProgressBar
+                            percent={100}
+                            filledBackground="linear-gradient(to right, #00ff00, #00ff00)"
+                        />
+                    </div>
                 ) :
                     (<div className=" flex flex-col gap-3">
                         <button onClick={() => handleAccept(_id)} className="btn btn-sm btn-accent">Accept</button>

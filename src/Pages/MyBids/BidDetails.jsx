@@ -34,7 +34,7 @@ const BidDetails = ({ bid, bids, setBids }) => {
                 {
                     status === 'completed' ? (<ProgressBar
                         percent={100}
-                        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                        filledBackground="linear-gradient(to right, #00ff00, #00ff00)"
                     />)
                         :
                         status === 'pending' ? (

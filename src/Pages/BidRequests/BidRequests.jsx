@@ -30,6 +30,7 @@ const BidRequests = () => {
                             <th className="text-black text-xl font-bold">Email</th>
                             <th className="text-black text-xl font-bold">Deadline</th>
                             <th className="text-black text-xl font-bold">Status</th>
+                            <th className="text-black text-xl font-bold">Action</th>
                         </tr>
                     </thead>
                     <tbody>

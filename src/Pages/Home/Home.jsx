@@ -1,4 +1,5 @@
 import Categories from "../Categories/Categories";
+import NewsAndBlogs from "../NewAndBlog/NewsAndBlogs";
 import TopCompanies from "../TopCompanies/TopCompanies";
 import WorkingProcess from "../WorkingProcess/WorkingProcess";
 import Banner from "./Banner";
@@ -12,6 +13,7 @@ const Home = () => {
             <Helmet><title>Job Recruiter | Home</title></Helmet>
             <Categories></Categories>
             <WorkingProcess></WorkingProcess>
+            <NewsAndBlogs></NewsAndBlogs>
             <TopCompanies></TopCompanies>
         </div>
     );
