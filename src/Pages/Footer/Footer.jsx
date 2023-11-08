@@ -72,7 +72,7 @@ const Footer = () => {
             </div>
             <hr className='pb-5' />
             <div className='text-center pb-5'>
-                <small className='text-[#a3a3a6] text-base font-semibold '> Job Recruiter © 2023. All rights reserved.</small>
+                <small className='text-white text-base font-semibold '> Job Recruiter © 2023. All rights reserved.</small>
             </div>
         </div>
     );
