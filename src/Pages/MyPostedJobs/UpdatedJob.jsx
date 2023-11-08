@@ -26,7 +26,7 @@ const UpdatedJob = () => {
 
 
 
-        fetch(`http://localhost:5000/jobs/${_id}`, {
+        fetch(`https://job-recruiter-server-new.vercel.app/jobs/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -41,7 +41,7 @@ const UpdatedJob = () => {
                     toast.success('Product Updated succesfully')
                 }
                 form.reset()
-                
+
             })
     }
 
@@ -49,7 +49,7 @@ const UpdatedJob = () => {
     return (
         <div>
             <div className="flex flex-col lg:flex-row items-center justify-evenly flex-shrink-0 bg-[#a7bcb9] mt-10">
-            <Helmet><title>Job Recruiter | Update Job</title></Helmet>
+                <Helmet><title>Job Recruiter | Update Job</title></Helmet>
                 <div className="text-center lg:text-start pt-5 lg:pt-0">
                     <h2 className="text-xl text-[#FFFFFF] font-medium mb-5">EMPLOYERS</h2>
                     <h1 className="text-[#FFFFFF] text-4xl mb-5">Looking to post a job?</h1>

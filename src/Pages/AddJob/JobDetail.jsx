@@ -22,7 +22,7 @@ const JobDetail = ({ job }) => {
         console.log(name)
         console.log(newBidJob)
 
-        fetch("http://localhost:5000/bid", {
+        fetch("https://job-recruiter-server-new.vercel.app/bid", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

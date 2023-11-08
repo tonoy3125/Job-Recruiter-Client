@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import axios from "axios";
+import "react-step-progress-bar/styles.css";
+import { ProgressBar } from "react-step-progress-bar";
 
 
 const BidDetails = ({ bid, bids, setBids }) => {
@@ -18,7 +20,7 @@ const BidDetails = ({ bid, bids, setBids }) => {
         })
         setBids(updatedStatus)
 
-        axios.patch(`http://localhost:5000/reqbid/bid/${_id}`, statusData)
+        axios.patch(`https://job-recruiter-server-new.vercel.app/reqbid/bid/${_id}`, statusData)
             .then(response => console.log(response.data))
             .catch(error => console.log(error))
     }

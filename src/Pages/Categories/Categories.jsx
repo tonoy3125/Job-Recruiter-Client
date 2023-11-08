@@ -19,7 +19,7 @@ const Categories = () => {
     // useEffect(() => {
     //     const fetchData = async () => {
     //         try {
-    //             const response = await fetch("http://localhost:5000/job/Graphics%20Design");
+    //             const response = await fetch("https://job-recruiter-server-new.vercel.app/job/Graphics%20Design");
     //             const data = await response.json();
     //             console.log(data)
     //             setGraphics(data);
@@ -32,15 +32,15 @@ const Categories = () => {
     // }, []);
 
     useEffect(() => {
-        fetch("http://localhost:5000/job/Web%20Development")
+        fetch("https://job-recruiter-server-new.vercel.app/job/Web%20Development")
             .then(res => res.json())
             .then(data => setDevelopment(data))
 
-        fetch("http://localhost:5000/job/Digital%20Marketing")
+        fetch("https://job-recruiter-server-new.vercel.app/job/Digital%20Marketing")
             .then(res => res.json())
             .then(data => setMarketing(data))
 
-        fetch("http://localhost:5000/job/Graphics%20Design")
+        fetch("https://job-recruiter-server-new.vercel.app/job/Graphics%20Design")
             .then(res => res.json())
             .then(data => setGraphics(data));
     }, [])
@@ -81,6 +81,7 @@ const Categories = () => {
                 </TabPanel>
 
             </Tabs>
+            <hr  className="w-[400px] mx-auto mt-20 border-2"/> 
         </div>
     );
 };

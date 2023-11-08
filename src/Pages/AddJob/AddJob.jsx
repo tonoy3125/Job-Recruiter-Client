@@ -7,11 +7,11 @@ import { Helmet } from "react-helmet";
 
 const AddJob = () => {
     const { user } = useContext(AuthContext)
-    
+
     const navigate = useNavigate()
     // const [buttonDisabled, setButtonDisabled] = useState(false);
 
-    
+
 
     const handleAddJob = event => {
         event.preventDefault()
@@ -28,7 +28,7 @@ const AddJob = () => {
         console.log(newJob)
 
 
-        fetch('http://localhost:5000/job', {
+        fetch('https://job-recruiter-server-new.vercel.app/job', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -49,7 +49,7 @@ const AddJob = () => {
     return (
         <div>
             <div className="flex flex-col lg:flex-row items-center justify-evenly flex-shrink-0  mt-10">
-            <Helmet><title>Job Recruiter | Add Job</title></Helmet>
+                <Helmet><title>Job Recruiter | Add Job</title></Helmet>
                 <div className="text-center lg:text-start pt-5 lg:pt-0">
                     <h2 className="text-xl text-[#FFFFFF] font-medium mb-5">EMPLOYERS</h2>
                     <h1 className="text-[#FFFFFF] text-4xl mb-5">Looking to post a job?</h1>
@@ -85,7 +85,7 @@ const AddJob = () => {
                         </div>
                         <div className="w-full md:w-1/2">
                             <h2 className=" text-base md:text-xl font-semibold text-[#1B1A1ACC] mb-4">Deadline <span className="text-red-700">*</span></h2>
-                            <input className="pt-5 pb-5 pl-2 md:p-5 w-full bg-[#fff]  text-base font-normal text-[#1B1A1A99] rounded" type="date" name="deadline"  placeholder="Deadline" id="" />
+                            <input className="pt-5 pb-5 pl-2 md:p-5 w-full bg-[#fff]  text-base font-normal text-[#1B1A1A99] rounded" type="date" name="deadline" placeholder="Deadline" id="" />
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row items-center gap-6 mb-6gap-6 mb-6 px-1 lg:px-24 ">

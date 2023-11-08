@@ -9,7 +9,7 @@ const BidRequests = () => {
     const email = user?.email;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bidjob/bid/${email}`)
+        fetch(`https://job-recruiter-server-new.vercel.app/bidjob/bid/${email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)

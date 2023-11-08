@@ -31,13 +31,12 @@ const router = createBrowserRouter([
             {
                 path: "/updatejob/:id",
                 element: <UpdatedJob></UpdatedJob>,
-                loader: ({ params }) => fetch(`http://localhost:5000/jobupdate/${params.id}`)
-                // loader: () => fetch('http://localhost:5000/updatejob')
+                loader: ({ params }) => fetch(`https://job-recruiter-server-new.vercel.app/jobupdate/${params.id}`)
             },
             {
                 path: "/jobs/:id",
                 element: <JobDetails></JobDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/jobs/${params.id}`)
+                loader: ({ params }) => fetch(`https://job-recruiter-server-new.vercel.app/jobs/${params.id}`)
             },
             {
                 path: "/postedjobs",

@@ -11,7 +11,7 @@ const MyPostedJobs = () => {
     // console.log(email, user)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/postedjob/${email}`, { credentials: 'include' })
+        fetch(`https://job-recruiter-server-new.vercel.app/postedjob/${email}`, { credentials: 'include' })
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
