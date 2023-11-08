@@ -57,7 +57,7 @@ const PostedJobCard = ({ job, jobs, setJobs }) => {
 
 
     return (
-        <div className="min-h-screen">
+        <div>
             <div className="max-w-2xl px-8 py-4 border bg-[#F5F4F1] rounded-lg shadow-md dark:bg-gray-800">
                 <div className="flex items-center justify-between">
                     <span className="text-sm font-light text-gray-600 dark:text-gray-400">{deadline}</span>

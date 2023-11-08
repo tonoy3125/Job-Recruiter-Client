@@ -19,7 +19,7 @@ const BidRequests = () => {
 
 
     return (
-        <div>
+        <div className="min-h-screen">
             <Helmet><title>Job Recruiter | Bid Request</title></Helmet>
             <div className="overflow-x-auto container mx-auto">
                 <table className="table">

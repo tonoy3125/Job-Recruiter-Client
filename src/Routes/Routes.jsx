@@ -12,6 +12,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import JobDetails from './../Pages/AddJob/JobDetails';
 import UpdatedJob from "../Pages/MyPostedJobs/UpdatedJob";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addjob",
-                element: <AddJob></AddJob>,
+                element: <PrivateRoute><AddJob></AddJob></PrivateRoute>,
             },
             {
                 path: "/updatejob/:id",
@@ -35,20 +36,20 @@ const router = createBrowserRouter([
             },
             {
                 path: "/jobs/:id",
-                element: <JobDetails></JobDetails>,
+                element: <PrivateRoute><JobDetails></JobDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://job-recruiter-server-new.vercel.app/jobs/${params.id}`)
             },
             {
                 path: "/postedjobs",
-                element: <MyPostedJobs></MyPostedJobs>,
+                element: <PrivateRoute><MyPostedJobs></MyPostedJobs></PrivateRoute>,
             },
             {
                 path: "/mybids",
-                element: <MyBids></MyBids>,
+                element: <PrivateRoute><MyBids></MyBids></PrivateRoute>,
             },
             {
                 path: "/bidrequests",
-                element: <BidRequests></BidRequests>,
+                element: <PrivateRoute><BidRequests></BidRequests></PrivateRoute>,
             },
             {
                 path: "/login",

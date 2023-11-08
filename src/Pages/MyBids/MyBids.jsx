@@ -18,7 +18,7 @@ const MyBids = () => {
             })
     }, [email])
     return (
-        <div className="mt-10 mb-10">
+        <div className="mt-10 mb-10 min-h-screen">
             <Helmet><title>Job Recruiter | My Bid</title></Helmet>
             <div className="overflow-x-auto container mx-auto">
                 <table className="table">
