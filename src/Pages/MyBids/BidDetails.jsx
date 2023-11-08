@@ -27,16 +27,29 @@ const BidDetails = ({ bid, bids, setBids }) => {
 
     return (
         <tr>
-            <th>1</th>
-            <td>{name}</td>
-            <td>{useremail}</td>
-            <td>{deadline}</td>
-            {/* {
-                status === 'progress' ? <td>progress</td> : 'pending' && status === 'complete' ? <td>Completed</td> : 'progress' && status === 'rejected' ? <td>Canceled</td> : ''
-            } */}
-            {
-                status === 'progress' ? (<button onClick={() => handleComplete(_id)} className="btn btn-sm btn-accent">Complete</button>) : (status === 'completed' && 'Completed') || (status === 'rejected' && 'Canceled')
-            }
+            <td className="text-white font-medium">{name}</td>
+            <td className="text-white font-medium">{useremail}</td>
+            <td className="text-white font-medium">{deadline}</td>
+            <td className="mt-2 text-white font-medium">
+                {
+                    status === 'completed' ? (<ProgressBar
+                        percent={100}
+                        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                    />)
+                        :
+                        status === 'pending' ? (
+                            <button disabled className="btn btn-sm btn-accent">Complete</button>
+                        )
+                            : status === 'rejected' ? (
+                                <ProgressBar
+                                    percent={100}
+                                    filledBackground="linear-gradient(to right, #ff0000, #ff0000)"
+                                />
+                            )
+                                :
+                                (<button onClick={() => handleComplete(_id)} className="btn btn-sm btn-accent">Complete</button>)
+                }
+            </td>
         </tr>
     );
 };

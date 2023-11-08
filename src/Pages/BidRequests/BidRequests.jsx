@@ -26,11 +26,10 @@ const BidRequests = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th></th>
-                            <th>Job title</th>
-                            <th>Email</th>
-                            <th>Deadline</th>
-                            <th>Status</th>
+                            <th className="text-black text-xl font-bold">Job title</th>
+                            <th className="text-black text-xl font-bold">Email</th>
+                            <th className="text-black text-xl font-bold">Deadline</th>
+                            <th className="text-black text-xl font-bold">Status</th>
                         </tr>
                     </thead>
                     <tbody>

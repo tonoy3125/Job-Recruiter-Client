@@ -2,8 +2,9 @@
 /* eslint-disable react/prop-types */
 import axios from "axios";
 import "react-step-progress-bar/styles.css";
-// import { ProgressBar } from "react-step-progress-bar";
-// import { ProgressBar } from 'react-step-progress-bar';
+import "react-step-progress-bar/styles.css";
+import { ProgressBar } from "react-step-progress-bar";
+
 
 
 const BidRequestsForm = ({ singlebid, bidrequest, setBidrequest }) => {
@@ -46,30 +47,31 @@ const BidRequestsForm = ({ singlebid, bidrequest, setBidrequest }) => {
 
     return (
         <tr>
-            <th>1</th>
-            <td>{name}</td>
-            <td>{useremail}</td>
-            <td>{deadline}</td>
-            <td>{status}</td>
-            <td className="flex items-center gap-3">
-                {/* {status === 'progress' || status === 'rejected' ? (
+            <td className="text-white font-medium">{name}</td>
+            <td className="text-white font-medium">{useremail}</td>
+            <td className="text-white font-medium">{deadline}</td>
+            <td className="text-white font-medium">{status}</td>
+            <td className="flex items-center gap-3 text-white font-medium">
+                {status === 'progress' || status === 'rejected' ? (
                     <ProgressBar
-                        percent={75}
+                        percent={status === 'progress' ? 50 : 100}
                         filledBackground={
-                            status === 'progress' ? 'linear-gradient(to right, #fefb72, #f0bb31)' : 'linear-gradient(to right, #fefb72, #f0bb31)'
+                            status === 'progress' ? 'linear-gradient(to right, #fefb72, #f0bb31)' : 'linear-gradient(to right, #ff0000, #ff0000)'
                         }
                     />
                 ) : status === 'completed' ? (
                     <ProgressBar
                         percent={100}
-                        filledBackground="linear-gradient(to right, #fefb72, #f0bb31)"
+                        filledBackground="linear-gradient(to right, #00ff00, #00ff00)"
                     />
                 ) :
-                    (<button onClick={() => handleAccept(_id)} className="btn btn-sm btn-accent">Accept</button>
-                <button onClick={() => handleReject(_id)} className="btn btn-sm btn-accent">Reject</button>)
-                } */}
-                <button onClick={() => handleAccept(_id)} className="btn btn-sm btn-accent">Accept</button>
-                <button onClick={() => handleReject(_id)} className="btn btn-sm btn-accent">Reject</button>
+                    (<div className=" flex flex-col gap-3">
+                        <button onClick={() => handleAccept(_id)} className="btn btn-sm btn-accent">Accept</button>
+                        <button onClick={() => handleReject(_id)} className="btn btn-sm btn-accent">Reject</button>
+                    </div>)
+                }
+                {/* <button onClick={() => handleAccept(_id)} className="btn btn-sm btn-accent">Accept</button>
+                <button onClick={() => handleReject(_id)} className="btn btn-sm btn-accent">Reject</button> */}
 
 
 
