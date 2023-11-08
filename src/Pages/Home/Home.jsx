@@ -1,5 +1,6 @@
 import Categories from "../Categories/Categories";
 import NewsAndBlogs from "../NewAndBlog/NewsAndBlogs";
+import Subscription from "../Subscription/Subscription";
 import TopCompanies from "../TopCompanies/TopCompanies";
 import WorkingProcess from "../WorkingProcess/WorkingProcess";
 import Banner from "./Banner";
@@ -15,6 +16,7 @@ const Home = () => {
             <WorkingProcess></WorkingProcess>
             <NewsAndBlogs></NewsAndBlogs>
             <TopCompanies></TopCompanies>
+            <Subscription></Subscription>
         </div>
     );
 };

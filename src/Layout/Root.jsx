@@ -9,7 +9,9 @@ const Root = () => {
         <div>
             <Navbar></Navbar>
             {
-                navigation.state === 'loading' ? <span className="loading loading-spinner loading-lg"></span> : <Outlet></Outlet>
+                navigation.state === 'loading' ? <div className="h-full flex-grow w-full flex justify-center items-center">
+                    <span className="loading loading-dots loading-lg"></span>
+                </div> : <Outlet></Outlet>
             }
             <Footer></Footer>
         </div>
