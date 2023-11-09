@@ -1,4 +1,5 @@
 import Categories from "../Categories/Categories";
+import HappyCustomer from "../HappyCustomer/HappyCustomer";
 import NewsAndBlogs from "../NewAndBlog/NewsAndBlogs";
 import Subscription from "../Subscription/Subscription";
 import TopCompanies from "../TopCompanies/TopCompanies";
@@ -15,6 +16,7 @@ const Home = () => {
             <Categories></Categories>
             <WorkingProcess></WorkingProcess>
             <NewsAndBlogs></NewsAndBlogs>
+            <HappyCustomer></HappyCustomer>
             <TopCompanies></TopCompanies>
             <Subscription></Subscription>
         </div>

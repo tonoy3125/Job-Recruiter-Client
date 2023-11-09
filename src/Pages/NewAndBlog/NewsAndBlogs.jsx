@@ -68,6 +68,7 @@ const NewsAndBlogs = () => {
 
                 </div>
             </div>
+            <hr className="w-[400px] mx-auto mt-20 border-2" />
         </section>
     );
 };

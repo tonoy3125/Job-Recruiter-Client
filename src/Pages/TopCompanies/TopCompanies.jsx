@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const TopCompanies = () => {
     return (
-        <div className="pb-5">
+        <div className="pb-5 mt-10">
             <div className=" gap-3 mb-3 mt-5 px-1 lg:px-0 text-center">
                 <h1 className="text-xl font-bold mb-5 text-black ">Top Companies</h1>
                 <h1 className="text-4xl font-bold text-white">Get hired in top companies</h1>
