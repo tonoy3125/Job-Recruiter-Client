@@ -47,8 +47,8 @@ const Categories = () => {
 
 
     return (
-        <div className="mt-10 mb-10">
-            <h1 className="text-2xl md:text-5xl font-bold text-[#653239] text-center mb-3">Popular Jobs Category</h1>
+        <div className="mt-16 mb-10">
+            <h1 className="text-2xl md:text-5xl font-bold text-[#653239] text-center mb-5">Popular Jobs Category</h1>
             <p className="text-sm md:text-lg font-medium text-white text-center mb-10">Our Company focuses on providing support and services to individuals, families, and <br />  communities in need, often through nonprofit organizations.</p>
             <Tabs>
                 <TabList className="text-center mb-5 text-black">

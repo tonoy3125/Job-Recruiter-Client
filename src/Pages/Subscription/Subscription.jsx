@@ -15,7 +15,7 @@ const Subscription = () => {
                                 <span className="inline-block w-1 h-1 bg-blue-500 rounded-full"></span>
                             </div>
 
-                            <p className="mt-4 font-medium text-gray-500 dark:text-gray-300">
+                            <p className="mt-4 font-medium text-black dark:text-gray-300">
                                 You can get All Access by selecting your plan!
                             </p>
 

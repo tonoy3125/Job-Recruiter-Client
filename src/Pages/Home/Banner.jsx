@@ -13,8 +13,8 @@ const Banner = () => {
                     <h1 className="mb-5 text-6xl text-fuchsia-900 font-bold">Find Your Dream <br /> Job Here</h1>
                     <p className="mb-5 text-white">Navigate your career path with ease.Discover a world of career <br /> opportunities tailored just for you. Join us and take the next <br /> step towards a brighter future. Our platform connects you to a <br /> network of opportunities waiting to be explored.</p>
                     <div className="flex items-center gap-5 justify-center">
-                        <button className="btn btn-success text-white">More Info</button>
-                        <button className="btn btn-success text-white">Learn More</button>
+                        <button className="btn btn-success text-white transition duration-300 ease-in-out transform hover:scale-110">More Info</button>
+                        <button className="btn btn-success text-white transition duration-300 ease-in-out transform hover:scale-110">Learn More</button>
                     </div>
                     <div className='flex items-center justify-center mt-4 gap-2'>
                         <AiOutlineYoutube className='text-2xl text-red-500'></AiOutlineYoutube>
@@ -38,6 +38,7 @@ const Banner = () => {
                     </Player>
                 </div>
             </div>
+            <hr className="w-[400px] mx-auto mt-20 border-2" />
         </div>
     );
 };

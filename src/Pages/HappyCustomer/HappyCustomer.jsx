@@ -47,7 +47,7 @@ const HappyCustomer = () => {
             >
                 {/* Slider 1 */}
                 <SwiperSlide>
-                    <div className=" cursor-pointer shadow-2xl  shadow-slate-300 border rounded-xl  ">
+                    <div className=" cursor-pointer shadow-2xl  shadow-slate-300 border rounded-xl ">
                         <div className="flex items-center justify-center mt-10 mb-6">
                             <img className="object-cover w-28 h-28 rounded-full ring-4 ring-gray-300 mr-5" src='https://i.ibb.co/fp7LbDK/avatar1.jpg' alt="" />
                             {/* <h1 className=" text-xl font-semibold text-[#a3a3a6] capitalize mr-1 ">John Snow</h1>
