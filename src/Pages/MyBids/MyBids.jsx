@@ -11,7 +11,7 @@ const MyBids = () => {
     const email = user?.email;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/bid/${email}?sort=${asc ? 'asc' : 'desc'}`)
+        fetch(`https://job-recruiter-server-new.vercel.app/bid/${email}?sort=${asc ? 'asc' : 'desc'}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
