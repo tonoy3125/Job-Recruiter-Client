@@ -6,20 +6,26 @@ import { Helmet } from "react-helmet";
 
 const MyBids = () => {
     const { user } = useContext(AuthContext)
+    const [asc, setAsc] = useState(false)
     const [bids, setBids] = useState([])
     const email = user?.email;
 
     useEffect(() => {
-        fetch(`https://job-recruiter-server-new.vercel.app/bid/${email}`)
+        fetch(`http://localhost:5000/bid/${email}?sort=${asc ? 'asc' : 'desc'}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
                 setBids(data)
             })
-    }, [email])
+    }, [email, asc])
     return (
         <div className="mt-10 mb-10 min-h-screen">
             <Helmet><title>Job Recruiter | My Bid</title></Helmet>
+            <div className="flex items-center justify-end container mx-auto">
+                <button onClick={() => setAsc(!asc)} className="btn btn-success text-white transition duration-300 ease-in-out transform hover:scale-110">
+                    {asc ? 'Status: Ascending' : 'Status: Descending'}
+                </button>
+            </div>
             <div className="overflow-x-auto container mx-auto">
                 <table className="table">
                     {/* head */}
